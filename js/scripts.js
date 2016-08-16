@@ -4,11 +4,12 @@ $(document).ready(function() {
     var sentenceArray = yourSentence.split([" "]);
     var longWords = [];
 
-    sentenceArray.forEach(function(word) {
-      if (word.length >= 3) {
-        longWords.push(word);
-      }
-    });
+    for (var index = 0; index < sentenceArray.length; index += 1) {
+      if (sentenceArray[index].length >= 3) {
+        longWords.push(sentenceArray[index]);
+      };
+    };
+
 
     var longWords = longWords.reverse();
     var longWordsSentence = longWords.join(" ");
